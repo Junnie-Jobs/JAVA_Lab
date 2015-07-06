@@ -44,14 +44,18 @@ public class BirthDay {
 		return 0;
 	}
 	
-	//윤년인지 아닌지 구분하는 method()
-	//년도는 무엇을 입력하던 정수이기만하면 올바른 값이다.
-	private boolean isLeapYear() 	{ return (this.year % 4 == 0); 	}
+	//윤년인지 check하는 method()
+	private boolean isLeapYear() 	{ 
+		if (this.year % 100 == 0) {
+			return (this.year % 400 == 0);
+		}
+		return (this.year % 4 == 0);
+	}
 	
 	//month variable에 1~12외에는 들어갈 수 없다. 자동으로 error처리를 함.
-	private boolean isFeb() 		{ return (this.month == 2);		}
+	private boolean isFeb() 		{ return (this.month == 2);	}
 	private boolean is30DaysMonth() {
-		return (this.month == 2 || this.month == 4 || this.month == 6 || this.month == 9 || this.month == 11);
+		return (this.month == 4 || this.month == 6 || this.month == 9 || this.month == 11);
 	}
 	private boolean is31DaysMonth() {
 		return (this.month == 1 || this.month == 3 || this.month == 5 || this.month == 7 || this.month == 8 || this.month == 10 || this.month == 12);
