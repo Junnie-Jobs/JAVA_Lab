@@ -24,6 +24,7 @@ public class BirthDay {
 	public void printDate() {
 		System.out.println(this.yearAnnoDomini()+" "+month+"월 "+day+"일");
 	}
+	
 	public void printValidResult() {
 		if(isValidDate()) {
 			System.out.println("유효한 날짜입니다"); return;
