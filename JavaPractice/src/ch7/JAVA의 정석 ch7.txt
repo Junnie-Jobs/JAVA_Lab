@@ -1,0 +1,114 @@
+{\rtf1\ansi\ansicpg949\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset129 AppleSDGothicNeo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10720\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\b\fs24 \cf0 7-1, 7-2, 7-14 : SutdaDeck.java\
+7-10, 7-11 : MyTv2.java\
+7-17 : unit.java\
+7-18 : Exercise7_18
+\b0 \
+==== 
+\f1 \'b9\'ae\'c1\'a6 \'c7\'ae\'c0\'cc 
+\f0 ====\
+\
+
+\b 7-3
+\b0 \
+
+\f1 Overriding\'c0\'ba \'c0\'da\'bd\'c4 \'c5\'ac\'b7\'a1\'bd\'ba\'b0\'a1 \'bb\'f3\'bc\'d3\'b9\'de\'c0\'ba method\'b8\'a6 \'c0\'e7\'c1\'a4\'c0\'c7\'c7\'cf\'b4\'c2 \'b0\'cd\'c0\'bb \'b8\'bb\'c7\'d1\'b4\'d9.\
+\'b0\'b0\'c0\'ba method\'b6\'f3\'b0\'ed \'c7\'cf\'b4\'f5\'b6\'f3\'b5\'b5 \'c0\'da\'bd\'c4 \'c5\'ac\'b7\'a1\'bd\'ba\'b0\'a1 \'c7\'cf\'b4\'c2 \'c0\'cf\'c0\'ba \'c1\'b6\'b1\'dd\'be\'bf \'c2\'f7\'c0\'cc\'b0\'a1 \'b3\'af \'bc\'f6 \'c0\'d6\'b4\'c2\'b5\'a5,\
+\'b0\'b0\'c0\'ba \'b8\'f1\'c0\'fb\'b0\'fa \'c0\'cc\'b8\'a7\'c0\'b8\'b7\'ce \'c7\'d1\'b9\'f8 \'b9\'ad\'be\'ee\'c1\'d6\'b0\'ed \'bc\'bc\'ba\'ce\'c0\'fb\'c0\'ce \'bb\'e7\'c7\'d7\'c0\'ba \'c0\'da\'bd\'c4 \'c5\'ac\'b7\'a1\'bd\'ba\'bf\'a1\'bc\'ad \'b0\'e1\'c1\'a4\'c7\'cf\'bf\'a9\
+\'c7\'cf\'b3\'aa\'c0\'c7 \'b8\'de\'bc\'d2\'b5\'e5\'b7\'ce \'b4\'d9\'be\'e7\'c7\'d1 \'b5\'bf\'c0\'db\'c0\'bb \'c7\'d2 \'bc\'f6 \'c0\'d6\'b5\'b5\'b7\'cf \'c7\'cf\'b4\'c2 \'b0\'cd\
+\
+
+\b 7-4
+\f0\b0 \
+
+\f1 d. \'c1\'a2\'b1\'d9 \'c1\'a6\'be\'ee\'c0\'da\'b4\'c2 \'c1\'b6\'bb\'f3\'c0\'c7 \'b8\'de\'bc\'ad\'b5\'e5\'ba\'b8\'b4\'d9 \'c1\'bc\'c0\'ba \'b9\'fc\'c0\'a7\'b7\'ce\'b8\'b8 \'ba\'af\'b0\'e6\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+	-> \'ba\'ce\'b8\'f0 \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'b8\'de\'bc\'d2\'b5\'e5\'c0\'c7 \'c1\'a2\'b1\'d9 \'c1\'a6\'c7\'d1\'c0\'da\'ba\'b8\'b4\'d9 \'c8\'ae\'c0\'e5\'b5\'c9 \'bc\'f6\'b4\'c2 \'c0\'d6\'be\'ee\'b5\'b5 \'c1\'bc\'be\'c6\'c1\'fa \'bc\'f6\'b4\'c2 \'be\'f8\'b4\'d9.\
+e. \'c1\'b6\'bb\'f3\'c0\'c7 \'b8\'de\'bc\'ad\'b5\'e5\'ba\'b8\'b4\'d9 \'b4\'f5 \'b8\'b9\'c0\'ba \'bc\'f6\'c0\'c7 \'bf\'b9\'bf\'dc\'b8\'a6 \'bc\'b1\'be\'f0\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+	-> \'b0\'b0\'c0\'ba \'bc\'f6\'c0\'c7 \'bf\'b9\'bf\'dc\'b8\'a6 \'bc\'b1\'be\'f0\'c7\'d8\'be\'df \'c7\'d1\'b4\'d9.
+\f0 \
+\
+
+\b 7-5\
+Product()\{\}
+\f1 \'b8\'a6 \'c3\'df\'b0\'a1\'c7\'d8\'be\'df \'c7\'d1\'b4\'d9.
+\f0 \
+
+\b0 \
+Tv c
+\f1 lass\'c0\'c7 \'c0\'ce\'bd\'ba\'c5\'cf\'bd\'ba\'b8\'a6 \'bb\'fd\'bc\'ba\'c7\'d2 \'b6\'a7, new Tv()\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'df\'b4\'d9.\
+\'b1\'d7\'b7\'af\'b3\'aa Tv class\'c0\'c7 \'ba\'ce\'b8\'f0 \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'ce Product \'c5\'ac\'b7\'a1\'bd\'ba\'bf\'a1\'b4\'c2 Product() \'bb\'fd\'bc\'ba\'c0\'da\'b0\'a1 \'be\'f8\'b1\'e2\'bf\'a1\
+Tv()\'b0\'a1 \'ba\'ce\'b8\'f0 \'bb\'fd\'bc\'ba\'c0\'da\'b8\'a6 \'c8\'a3\'c3\'e2\'c7\'d2 \'b6\'a7 \'c1\'a4\'c0\'c7\'b5\'c7\'be\'ee \'c0\'d6\'c1\'f6 \'be\'ca\'c0\'ba \'bb\'fd\'bc\'ba\'c0\'da\'b8\'a6 \'c8\'a3\'c3\'e2\'c7\'cf\'b0\'d4 \'b5\'c7\'be\'ee \'c4\'c4\'c6\'c4\'c0\'cf \'bf\'a1\'b7\'af\'b0\'a1 \'b9\'df\'bb\'fd.
+\f0 \
+\
+
+\b 7-6
+\b0 \
+
+\f1 \'c0\'da\'bc\'d5 \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'bb\'fd\'bc\'ba\'c0\'da\'bf\'a1\'bc\'ad \'c1\'b6\'bb\'f3 \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'bb\'fd\'bc\'ba\'c0\'da\'b8\'a6 \'c8\'a3\'c3\'e2\'c7\'d8\'be\'df \'c7\'cf\'b4\'c2 \'c0\'cc\'c0\'af\'b4\'c2
+\f0 \
+
+\f1 \'c0\'da\'bc\'d5 \'c5\'ac\'b7\'a1\'bd\'ba\'b4\'c2 \'b1\'e2\'ba\'bb\'c0\'fb\'c0\'b8\'b7\'ce \'c1\'b6\'bb\'f3 \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'c0\'ce\'bd\'ba\'c5\'cf\'bd\'ba \'ba\'af\'bc\'f6\'b8\'a6 \'bb\'f3\'bc\'d3\'b9\'de\'be\'c6\'bc\'ad \'c3\'ca\'b1\'e2\'c8\'ad\'b8\'a6 \'c1\'f8\'c7\'e0\'c7\'cf\'b1\'e2 \'b6\'a7\'b9\'ae\'c0\'cc\'b4\'d9.\
+\'b6\'a7\'b9\'ae\'bf\'a1 \'b8\'d5\'c0\'fa \'c1\'b6\'bb\'f3 \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'bb\'fd\'bc\'ba\'c0\'da\'b8\'a6 \'c5\'eb\'c7\'d8\'bc\'ad \'c1\'b6\'bb\'f3 \'c5\'ac\'b7\'a1\'bd\'ba \'b3\'bb\'bf\'a1 \'c0\'d6\'b4\'c2 \'c0\'ce\'bd\'ba\'c5\'cf\'bd\'ba \'ba\'af\'bc\'f6\'c0\'c7 \'c3\'ca\'b1\'e2\'c8\'ad\'b8\'a6 \'c1\'f8\'c7\'e0\'c7\'d8\'be\'df \'c7\'d1\'b4\'d9.\
+\
+
+\b 7-7
+\b0 \
+
+\f0 Child() Child(int x) Parent() Parent(int x) 
+\f1 \'bc\'f8\'c0\'b8\'b7\'ce \'c8\'a3\'c3\'e2\
+\'b0\'e1\'b0\'fa \'b0\'aa\'c0\'ba \
+x=200\
+\
+
+\b 7-8
+\f0\b0 \
+a. public-protected-(default)-private\
+
+\f1 public\'c0\'ba \'c1\'a2\'b1\'d9 \'c1\'a6\'c7\'d1\'c0\'cc \'be\'f8\'b4\'d9.\
+protected\'b4\'c2 \'b0\'b0\'c0\'ba \'c6\'d0\'c5\'b0\'c1\'f6 & \'c0\'da\'bc\'d5 \'c5\'ac\'b7\'a1\'bd\'ba(\'b4\'d9\'b8\'a5 package \'bf\'a9\'ba\'ce X)\'bf\'a1\'bc\'ad \'c1\'a2\'b1\'d9 \'b0\'a1\'b4\'c9\'c7\'cf\'b4\'d9.\
+default\'b4\'c2 \'b0\'b0\'c0\'ba \'c6\'d0\'c5\'b0\'c1\'f6\'bf\'a1\'bc\'ad\'b8\'b8 \'c1\'a2\'b1\'d9 \'b0\'a1\'b4\'c9\'c7\'cf\'b4\'d9.
+\f0 \
+private
+\f1 \'c0\'ba \'b0\'b0\'c0\'ba class\'bf\'a1\'bc\'ad\'b8\'b8 \'c1\'a2\'b1\'d9 \'b0\'a1\'b4\'c9\'c7\'cf\'b4\'d9.\
+\
+
+\b 7-9
+\b0 \
+c. \'b8\'de\'bc\'ad\'b5\'e5 - \'bf\'c0\'b9\'f6\'b7\'ce\'b5\'f9\'c0\'bb \'c7\'d2 \'bc\'f6 \'be\'f8\'b4\'d9.\
+	-> \'bf\'c0\'b9\'f6\'b7\'ce\'b5\'f9 \'b0\'a1\'b4\'c9\'c7\'cf\'b4\'d9. \'bf\'c0\'b9\'f6\'b6\'f3\'c0\'cc\'b5\'f9\'c0\'cc \'ba\'d2\'b0\'a1\'b4\'c9\'c7\'cf\'b4\'d9.\
+\
+
+\b 7-12\
+
+\b0 c. \'c1\'f6\'bf\'aa\'ba\'af\'bc\'f6\'bf\'a1\'b5\'b5 \'c1\'a2\'b1\'d9 \'c1\'a6\'be\'ee\'c0\'da\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+	-> \'c1\'a2\'b1\'d9 \'c1\'a6\'be\'ee\'c0\'da\'b4\'c2 \'c5\'ac\'b7\'a1\'bd\'ba, \'b8\'e2\'b9\'f6\'ba\'af\'bc\'f6, method, \'bb\'fd\'bc\'ba\'c0\'da\'bf\'a1 \'bb\'e7\'bf\'eb\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+\
+
+\b 7-13
+\b0 \
+Math\'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 method\'b5\'e9\'c0\'ba static method\'c0\'cc\'b1\'e2 \'b6\'a7\'b9\'ae\'bf\'a1 \'b5\'fb\'b7\'ce \'b0\'b4\'c3\'bc\'b8\'a6 \'c7\'fc\'bc\'ba\'c7\'d2 \'c7\'ca\'bf\'e4\'b0\'a1 \'be\'f8\'b1\'e2 \'b6\'a7\'b9\'ae.\
+\'ba\'d2\'c7\'ca\'bf\'e4\'c7\'d1 \'c0\'ce\'bd\'ba\'c5\'cf\'bd\'ba\'c0\'c7 \'bb\'fd\'bc\'ba\'c0\'bb \'b8\'b7\'b4\'c2\'b4\'d9.\
+\
+
+\b 7-15
+\b0 \
+e. t = (Tank)u;\
+	-> \'ba\'ce\'b8\'f0\'c5\'b8\'c0\'d4\'c0\'bb \'c0\'da\'bc\'d5 \'c5\'b8\'c0\'d4\'c0\'b8\'b7\'ce \'c7\'fc\'ba\'af\'c8\'af \'ba\'d2\'b0\'a1\'b4\'c9\
+\
+
+\b 7-16
+\b0 \
+e. fe instanceof Ambulance\
+	-> fe\'b4\'c2 FireEngine, Car, Movable\'bf\'a1 \'b4\'eb\'c7\'d8\'bc\'ad true\'b8\'a6 \'b9\'dd\'c8\'af\'c7\'d1\'b4\'d9.\
+\
+\
+\
+
+\f0 \
+\
+}

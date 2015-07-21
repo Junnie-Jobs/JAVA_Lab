@@ -1,5 +1,7 @@
 package automobile_com;
 
+import java.util.ArrayList;
+
 public class SingleCompany {
 	
 //	싱글톤!
@@ -12,6 +14,33 @@ public class SingleCompany {
 			company = new SingleCompany();
 		return company;
 	}
+	
+//	다르게 구현해보자
+	private ArrayList<Automobile> carList1= new ArrayList<Automobile>();
+	
+	public void addCar1(Automobile car, int num){
+		for(int i=0; i<num; i++)
+			carList1.add(car);
+	}
+	
+	public void deleteCar1(Automobile car, int num){
+		int numOfCar = 0;
+		ArrayList indexList = new ArrayList();
+		
+		for(int i=0; i<carList1.size(); i++){
+			if(carList1.get(i) == car){
+				numOfCar++;
+				indexList.add(i);
+			}
+		}
+		
+		if(num > numOfCar)
+			System.out.println("삭제하려는 차량의 수가 보유량보다 많습니다");
+		else{
+			carList.get(i);
+		}
+	}
+//	다르게 구현 중
 	
 //	보유 차량 리스트
 //	새로운 종류의 차량을 소유하게 되면, 리스트에 추가하는 method()를 만들자
