@@ -19,51 +19,40 @@ public class ManageScore {
 	}
 	private ManageScore(){}
 	
+	Math math = Math.getInstance();
+	English english = English.getInstance();
+	StudentDatabase sDB = StudentDatabase.getInstance();
+	
 //	실제로 외부에 보여줄 method
-	public void printMathResult(){
-		Math math = Math.getInstance();
+	public void printResult(){
 		
-		System.out.println("====================수학 등급====================");
-		System.out.println("학생 이름 \t학번 \t수학 등급");
+		System.out.println("====================과목 등급====================");
+		System.out.println("학생이름 \t학번 \t전공 \t수학 등급 \t영어 등급");
 		
-		for(int i=0; i<math.getListLength(); i++){
-			String studentName = math.getStudentInSlist(i).getStudentName();
-			String studentNum = math.getStudentInSlist(i).getStudentNumber();
-			String mathScoreByMajor = mathScoreByMajor(math, i);
+		for(int i=0; i<sDB.getTotalStudentListLength(); i++){
+			String studentName = sDB.getStudentInlist(i).getStudentName();
+			String studentNum = sDB.getStudentInlist(i).getStudentNumber();
+			String studentMajor = sDB.getStudentInlist(i).getMajor();
 			
-			System.out.println(studentName +"\t"+ studentNum +"\t"+ mathScoreByMajor);
+			int mathScore = sDB.getStudentInlist(i).getMathScore();
+			int engScore = sDB.getStudentInlist(i).getEngScore();
+			
+			String mathGrade = "__";
+			String engGrade = "__";
+			
+			if(studentMajor == "수학"){
+				mathGrade = majorScore(mathScore);
+				engGrade = notMajorScore(engScore);
+			}
+			if(studentMajor == "영어"){
+				engGrade = majorScore(engScore);
+				mathGrade = notMajorScore(mathScore);
+			}
+			
+			System.out.println(studentName +"\t"+ studentNum +"\t"+ studentMajor +"\t"+ mathGrade +"\t"+ engGrade);
 		}
 	}
-	
-	public void printEnglishResult(){
-		English english = English.getInstance();
-		
-		System.out.println("====================영어 등급====================");
-		System.out.println("학생 이름 \t학번 \t영어 등급");
-		
-		for(int i=0; i<english.getListLength(); i++){
-			String studentName = english.getStudentInSlist(i).getStudentName();
-			String studentNum = english.getStudentInSlist(i).getStudentNumber();
-			String engScoreByMajor = engScoreByMajor(english, i);
-			
-			System.out.println(studentName +"\t"+ studentNum +"\t"+ engScoreByMajor);
-		}
-	}
-	
-	private String mathScoreByMajor (Math math, int index){
-		String major = math.getStudentInSlist(index).getMajor();
-		int mathScore = math.getStudentInSlist(index).getMathScore();
-				
-		if(major == "수학") return majorScore(mathScore);
-		else return notMajorScore(mathScore);
-	}
-	private String engScoreByMajor (English english, int index){
-		String major = english.getStudentInSlist(index).getMajor();
-		int engScore = english.getStudentInSlist(index).getEngScore();
-		
-		if(major == "영어") return majorScore(engScore);
-		else return notMajorScore(engScore);
-	}
+
 	
 //	아래 두 개의 method를 수정하면 각 점수에 따른 학점 책정 정책을 변경할 수 있다.
 	private String majorScore(int score){
@@ -77,9 +66,9 @@ public class ManageScore {
 			return "C";
 		if(score >= 60 && score < 70)
 			return "D";
-		if(score < 60)
+		if(score >= 0 && score < 60)
 			return "F";
-		return null;
+		return "_";
 	}
 	private String notMajorScore(int score){
 		if(score >= 90 && score <=100)
@@ -90,8 +79,8 @@ public class ManageScore {
 			return "C";
 		if(score >= 55 && score < 70)
 			return "D";
-		if(score < 55)
+		if(score >= 0 && score < 55)
 			return "F";
-		return null;
+		return "_";
 	}
 }

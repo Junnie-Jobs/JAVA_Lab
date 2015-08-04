@@ -24,6 +24,13 @@ public class English implements ISubject{
 	}
 	
 	@Override
+	public void setStudentScore(Student student, int score){
+		if(score > MAX_SCORE || score < MIN_SCORE)
+			System.out.println("올바른 점수가 아닙니다.");
+		student.setEngScore(score);
+	}
+	
+	@Override
 	public Student getStudentInSlist(int index) {
 		return sList.get(index);
 	}
