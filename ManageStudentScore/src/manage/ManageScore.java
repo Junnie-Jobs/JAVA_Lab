@@ -37,8 +37,8 @@ public class ManageScore {
 			int mathScore = sDB.getStudentInlist(i).getMathScore();
 			int engScore = sDB.getStudentInlist(i).getEngScore();
 			
-			String mathGrade = "__";
-			String engGrade = "__";
+			String mathGrade = "_";
+			String engGrade = "_";
 			
 			if(studentMajor == "수학"){
 				mathGrade = majorScore(mathScore);
