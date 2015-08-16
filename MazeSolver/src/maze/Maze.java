@@ -47,9 +47,6 @@ public class Maze {
 	    System.out.println(buffer);
 	}
 	
-	
-	
-	
 	public void setStartPoint(int i, int j){
 		if(isInvalidPoint(i, j))
 			return;
@@ -73,8 +70,6 @@ public class Maze {
 			return;
 		this.maze.get(j).set(i, value);
 	}
-	
-	
 	
 	private boolean isInvalidPoint(int i, int j){
 		if(i < Define.MININDEX || i > Define.MAXINDEX || j < Define.MININDEX || j > Define.MAXINDEX){

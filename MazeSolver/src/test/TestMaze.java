@@ -23,7 +23,6 @@ public class TestMaze {
 			
 			maze.printMaze();
 			
-			
 			FileInputStream fis = new FileInputStream("maze.properties");
 			Properties prop = new Properties();
 			prop.load(fis);
@@ -42,7 +41,7 @@ public class TestMaze {
 			}
 			
 			finder.findPath(maze);
-			
+			finder.printResult();
 			
 //		이하 예외처리
 		}catch(IOException e){

@@ -54,8 +54,10 @@ public class PathFinder_8ways implements IPathFinder{
 //		이동 가능 점에 대한 작업을 마치면 현 위치의 방문 여부를 표시해 둡니다.
 			visitedList.setPointValue(currentPoint.getPoint_x(), currentPoint.getPoint_y(), Define.WALL);
 		}
-		
-//		결과를 출력합니다.
+	}
+	
+	@Override
+	public void printResult(){
 		for(int i=0; i<pointList.size(); i++){
 			Point point = pointList.get(i);
 			int x = point.getPoint_x();
@@ -64,7 +66,6 @@ public class PathFinder_8ways implements IPathFinder{
 		}
 		
 		System.out.println("Pathfinding Complete : "+(pointList.size()+1)+"회");
-		return;
 	}
 
 	@Override

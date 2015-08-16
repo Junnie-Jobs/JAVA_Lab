@@ -13,4 +13,5 @@ public interface IPathFinder {
 	public ArrayList<Point> checkDirection(Maze maze, Point currentPoint, Maze visitedList);
 	public Point findStartPoint(Maze maze);
 	public Point findEndPoint(Maze maze);
+	public void printResult();
 }

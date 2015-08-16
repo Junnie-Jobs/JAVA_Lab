@@ -20,6 +20,7 @@ public class PathFinder_4ways implements IPathFinder {
 
 		while(true){
 
+			pointList.add(currentPoint);
 			if(currentPoint.getValue().equals(endPoint.getValue())){
 				break;
 			}
@@ -28,8 +29,6 @@ public class PathFinder_4ways implements IPathFinder {
 
 //		이동할 수 있는 가짓 수에 따라서 다른 행동(0, 1, 2+)
 			if(validPoints.size() == 0){
-				pointList.add(currentPoint);
-
 				if(pointStack.size() == 0){
 					System.out.println("더 이상 길이 없습니다!!!");
 					break;
@@ -39,14 +38,12 @@ public class PathFinder_4ways implements IPathFinder {
 			}
 
 			if(validPoints.size() == 1){
-				pointList.add(currentPoint);
 				currentPoint = validPoints.get(0);
 			}
 		
 //		이동가능한 길이 둘 이상일 경우, 스택에 위치 저장.
 			if(validPoints.size() > 1){
 				pointStack.add(currentPoint);
-				pointList.add(currentPoint);
 				
 				int minValueIndex = runAStarAlgorithm(validPoints, currentPoint, endPoint);
 				currentPoint = validPoints.get(minValueIndex);
@@ -55,8 +52,10 @@ public class PathFinder_4ways implements IPathFinder {
 //		이동 가능 점에 대한 작업을 마치면 현 위치의 방문 여부를 표시해 둡니다.
 			visitedList.setPointValue(currentPoint.getPoint_x(), currentPoint.getPoint_y(), Define.WALL);
 		}
-		
-//		결과를 출력합니다.
+	}
+
+	@Override
+	public void printResult(){
 		for(int i=0; i<pointList.size(); i++){
 			Point point = pointList.get(i);
 			int x = point.getPoint_x();
@@ -65,9 +64,8 @@ public class PathFinder_4ways implements IPathFinder {
 		}
 		
 		System.out.println("Pathfinding Complete : "+(pointList.size()+1)+"회");
-		return;
 	}
-
+	
 	@Override
 	public int runAStarAlgorithm(ArrayList<Point> validPoints, Point currentPoint, Point endPoint){
 	
