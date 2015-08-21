@@ -1,13 +1,15 @@
 package studentinfo;
 
 import java.util.ArrayList;
+import java.util.TreeSet;
 
 public class School {
 
 	private static School instance = new School();
 	
 	private static String SCHOOL_NAME = "SilverBell School";
-	private ArrayList<Student> studentList = new ArrayList<Student>();
+//	private ArrayList<Student> studentList = new ArrayList<Student>();
+	private TreeSet<Student> studentList = new TreeSet<Student>();
 	private ArrayList<CourseSession> sessionList = new ArrayList<CourseSession>();
 	
 	private School(){}
@@ -18,7 +20,7 @@ public class School {
 		return instance;
 	}
 	
-	public ArrayList<Student> getStudentList(){
+	public TreeSet<Student> getStudentList(){
 		return studentList;
 	}
 	

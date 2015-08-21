@@ -2,7 +2,7 @@ package studentinfo;
 
 import java.util.ArrayList;
 
-public class Student {
+public class Student implements Comparable<Student>{
 	
 	private int studentId;
 	private String studentName;
@@ -46,5 +46,10 @@ public class Student {
 
 	public void setMajorSession(CourseSession majorSession) {
 		this.majorSession = majorSession;
+	}
+
+	@Override
+	public int compareTo(Student student) {
+		return this.studentName.compareTo(student.studentName);
 	}
 }

@@ -1,8 +1,8 @@
 package studentinfo.report;
 
 import java.util.ArrayList;
-
-
+import java.util.Iterator;
+import java.util.TreeSet;
 
 import studentinfo.GradeStrategy;
 import studentinfo.MajorGradeStrategy;
@@ -37,20 +37,25 @@ public class GenerateGradeReport {
 	
 	public void makeBody(){
 		
-		ArrayList<Student> studentList = school.getStudentList();
+		TreeSet<Student> studentList = school.getStudentList();
 		
 		for(int i=0; i<studentList.size(); i++){
-			Student student = studentList.get(i);
-			buffer.append(student.getStudentName());
-			buffer.append(" | ");
-			buffer.append(student.getStudentId());
-			buffer.append(" | ");
-			buffer.append(student.getMajorSession().getSessionName());
-			buffer.append(" | ");
 			
-			getScoreGrade(student);
-			buffer.append("\n");
-			buffer.append(LINE);
+			Iterator<Student> ir = studentList.iterator();
+//			Student student = studentList.get(i);
+			while(ir.next() != null){
+				Student student = ir.next();
+				buffer.append(student.getStudentName());
+				buffer.append(" | ");
+				buffer.append(student.getStudentId());
+				buffer.append(" | ");
+				buffer.append(student.getMajorSession().getSessionName());
+				buffer.append(" | ");
+				
+				getScoreGrade(student);
+				buffer.append("\n");
+				buffer.append(LINE);
+			}
 		}
 	}
 	
