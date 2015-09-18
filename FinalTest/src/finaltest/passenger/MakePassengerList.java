@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class MakePassengerList {
-	private static String fileSrc = "/Users/NEXT/Documents/JAVA_Lab/Final/src/data/passengerList.csv";
+	private static String fileSrc = "/Users/NEXT/Documents/JAVA_Lab/FinalTest/src/data/passengerList.csv";
 	
 	public static ArrayList<Passenger> makeList(){
 		ArrayList<Passenger> passengerList = new ArrayList<Passenger>();

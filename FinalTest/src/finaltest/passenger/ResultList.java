@@ -19,7 +19,7 @@ public class ResultList {
 	public static void makeResultFile(String fileName){
 		
 		try {
-			String fileSrc = "/Users/NEXT/Documents/JAVA_Lab/Final/src/data/"+ fileName +".csv";
+			String fileSrc = "/Users/NEXT/Documents/JAVA_Lab/FinalTest/src/data/"+ fileName +".csv";
 			File csv = new File(fileSrc);
 			BufferedWriter bw = new BufferedWriter(new FileWriter(csv));
 			
