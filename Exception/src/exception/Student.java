@@ -1,10 +1,13 @@
 package exception;
 
+import logging.MyLogger;
+
 public class Student {
 
 	private String studentName;
+	MyLogger myLogger = new MyLogger();
 	
-	public Student(String studentName){
+	public Student(String studentName) throws StudentNameFormatException{
 		if(studentName == null){
 			throw new StudentNameFormatException("name must not be null");
 		}
@@ -15,6 +18,7 @@ public class Student {
 	}
 	
 	public String getStudentName(){
+		myLogger.fine("begin getStudentName()");
 		return this.studentName;
 	}
 }
