@@ -41,6 +41,7 @@ public class Main {
 					iter.remove();
 				}
 			}
+//			booth.showReadyQueue();
 			booth.doTicketing();
 			booth.showTicketing();
 			booth.showReadyQueue();

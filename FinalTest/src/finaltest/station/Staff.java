@@ -45,6 +45,7 @@ public class Staff {
 		
 		isWork = true;
 		startTime = Main.curTime;
+		myPassenger.setTicketingStart(startTime);
 		timeToEnd = myPassenger.getTicketingTime() + startTime;
 	}
 	

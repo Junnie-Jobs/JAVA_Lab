@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.PriorityQueue;
 
 import finaltest.passenger.Passenger;
+import finaltest.policy.ShortReadyTimePolicy;
 import finaltest.policy.TicketingTimePolicy;
 
 
@@ -14,7 +15,7 @@ public class TicketBooth {
 	private Staff[] staffLists = new Staff[STAFF_MAX];
 	
 	public TicketBooth() {
-		waitingQueue = new PriorityQueue<Passenger>(50, new TicketingTimePolicy());
+		waitingQueue = new PriorityQueue<Passenger>(50, new ShortReadyTimePolicy());
 		for(int i=0; i<STAFF_MAX; i++){
 			staffLists[i] = new Staff(this);
 		}
@@ -45,7 +46,7 @@ public class TicketBooth {
 		Iterator<Passenger> iter = waitingQueue.iterator();
 		while(iter.hasNext()){
 			Passenger c = iter.next();
-			System.out.println(c);
+			System.out.print(c + ", 티케팅 대기 : " +c.getTicketingReady()+"분\n");
 		}
 		System.out.println();
 	}

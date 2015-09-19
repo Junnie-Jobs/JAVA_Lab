@@ -1,5 +1,6 @@
 package finaltest.passenger;
 
+import finaltest.Main;
 import finaltest.station.TravelTimeTable;
 
 public class Passenger {
@@ -13,6 +14,8 @@ public class Passenger {
 	private int leaveTime;
 	private int finalTime;
 	
+	private int ticketingStart;
+	
 //	생성자
 	Passenger(String[] token){
 		this.id = Integer.parseInt(token[0]);
@@ -21,9 +24,12 @@ public class Passenger {
 		this.ticketingTime = Integer.parseInt(token[3]);
 		this.stationFrom = token[4];
 		this.stationTo = token[5];
+		this.ticketingStart = -1;
 	}
 	
-	
+	public void setTicketingStart(int time){
+		this.ticketingStart = time;
+	}
 	public int getId(){
 		return this.id;
 	}
@@ -36,9 +42,13 @@ public class Passenger {
 	public int getTravelTime(){
 		return TravelTimeTable.travelTime(stationFrom, stationTo);
 	}
-	
-	public int getReadyTime(){
-		return leaveTime - arrivedTime;
+	public int getTicketingReady(){
+		if(ticketingStart == -1)
+			return Main.curTime - this.arrivedTime;
+		return ticketingStart - this.arrivedTime;
+	}
+	public int getTrainReady(){
+		return leaveTime - (arrivedTime+getTicketingReady()+getTicketingTime());
 	}
 	public int getLeaveTime(){
 		return this.leaveTime;
@@ -55,9 +65,9 @@ public class Passenger {
 	}
 	
 	public String getResultData(){
-//		bw.write("아이디,이름,부스도착시간,매표소요시간,이동소요시간,출발역,도착역,대기시간,출발시간,도착시간\n");
+//		bw.write("아이디,이름,부스도착시간,매표소요시간,이동소요시간,출발역,도착역,매표대기시간,열차대기시간,출발시간,도착시간\n");
 		return id+","+name+","+arrivedTime+","+ticketingTime+","+getTravelTime()+","
-				+stationFrom+","+stationTo+","+getReadyTime()+","+leaveTime+","+finalTime;
+				+stationFrom+","+stationTo+","+getTicketingReady()+","+getTrainReady()+","+leaveTime+","+finalTime;
 	}
 	@Override
 	public String toString() {
