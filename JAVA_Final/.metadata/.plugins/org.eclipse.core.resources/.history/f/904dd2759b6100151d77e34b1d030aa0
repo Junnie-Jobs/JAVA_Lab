@@ -1,0 +1,10 @@
+package num4;
+
+public class Avente extends Car{
+
+	private String name;
+	
+	public Avente(String name){
+		this.name = name;
+	}
+}

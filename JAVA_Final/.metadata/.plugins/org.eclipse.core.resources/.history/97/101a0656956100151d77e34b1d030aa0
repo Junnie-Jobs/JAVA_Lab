@@ -1,0 +1,14 @@
+package num5;
+
+public class Employee {
+	private static int employeeID;
+	public String employeeName;
+	
+	public Employee(String name){
+		this.employeeName = name;
+	}
+	
+	public int getEmployeeID(){
+		return this.employeeID
+	}
+}

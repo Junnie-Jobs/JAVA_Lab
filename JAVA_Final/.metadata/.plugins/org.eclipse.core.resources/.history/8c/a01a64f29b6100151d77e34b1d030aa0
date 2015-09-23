@@ -1,0 +1,27 @@
+package num4;
+
+public class Avante extends Car{
+
+	Avante(String asdf){
+		super(asdf);
+	}
+	
+	public void start() {
+//		System.out.println("asdf");
+	}
+
+	public void drive() {
+		// TODO Auto-generated method stub
+		super.drive();
+	}
+
+	public void stop() {
+		// TODO Auto-generated method stub
+		super.stop();
+	}
+
+	public void turnoff() {
+		// TODO Auto-generated method stub
+		super.turnoff();
+	}
+}

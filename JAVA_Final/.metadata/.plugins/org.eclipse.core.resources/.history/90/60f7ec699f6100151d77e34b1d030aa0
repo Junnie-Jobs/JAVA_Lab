@@ -1,0 +1,21 @@
+package num6;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		
+		while(true){
+			String input;
+			if(input == "end"){
+				break;
+			}
+			if(input == "S")
+				System.out.println("Shell sort");
+			if(input == "Q")
+				System.out.println("Quick sort");
+			if(input == "M")
+				System.out.println("Merge sort");
+		}
+	}
+}

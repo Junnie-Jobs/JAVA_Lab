@@ -1,0 +1,15 @@
+package num8;
+
+public class DecoTest {
+
+	public static void main(String[] args) {
+		
+		TextView text1 = new TextView();
+		text.viewing();
+		
+		TextView text2 = new Spring(new LineText(new TextView()));
+		
+
+	}
+
+}

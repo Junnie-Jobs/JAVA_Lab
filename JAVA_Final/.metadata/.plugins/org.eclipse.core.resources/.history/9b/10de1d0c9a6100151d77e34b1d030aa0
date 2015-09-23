@@ -1,0 +1,9 @@
+package num5;
+
+public class Car {
+
+	start(){}
+	drive(){}
+	stop(){}
+	turnoff(){}
+}

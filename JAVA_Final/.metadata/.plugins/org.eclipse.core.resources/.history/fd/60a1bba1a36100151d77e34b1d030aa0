@@ -1,0 +1,35 @@
+package num1;
+
+import java.util.HashMap;
+
+public class CarFactory {
+
+	private HashMap<String, Car> hmap = new HashMap<String, Car>();
+	
+	private static CarFactory cf = new CarFactory();
+	private CarFactory(){};
+	
+	public static CarFactory getInstance(){
+		if(cf == null){
+			CarFactory cf = new CarFactory();
+			return cf;
+		}
+		return cf;
+	}
+	
+	public Car createCar(String carname){
+		if(hasCar(carname)){
+			return hmap.get(carname);
+		}
+		Car car = new Car(carname);
+		hmap.put(carname, car);
+		return car;
+	}
+	
+	private boolean hasCar(String carname){
+		if(hmap.get(carname) != null){
+			return true;
+		}
+		return false;
+	}
+}

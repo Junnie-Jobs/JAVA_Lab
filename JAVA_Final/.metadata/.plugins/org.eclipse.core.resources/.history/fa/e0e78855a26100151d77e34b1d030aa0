@@ -1,0 +1,20 @@
+package num4;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Avante avante = new Avante("avante");
+		avante.run();
+		Genesis genesis = new Genesis("genesis");
+		genesis.run();
+		Grandeur grandeur = new Grandeur("Grandeur");
+		grandeur.run();
+		Sonata sonata = new Sonata("sonata");
+		sonata.run();
+		
+		Bumblebee bb = new Bumblebee("BumbleBumble");
+		bb.run();
+	}
+
+}

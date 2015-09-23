@@ -1,0 +1,21 @@
+package num4;
+
+public abstract class Car {
+
+	Car(String asdf){
+		System.out.println(asdf);
+	}
+	
+	public void start(){}
+	public void drive(){}
+	public void stop(){}
+	public void turnoff(){}
+	
+	public void run(){
+		this.start();
+		this.drive();
+		this.stop();
+		this.turnoff();
+	}
+}
+

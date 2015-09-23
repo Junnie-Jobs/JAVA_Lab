@@ -1,0 +1,32 @@
+package num3;
+
+public class Student {
+
+	public String studentId;
+	public String name;
+
+	public Student(String studentId, String name){
+		this.studentId = studentId;
+		this.name = name;
+	}
+
+	@Override
+	public int hashCode() {
+		Integer i = new Integer(this.studentId)/3;
+		return i;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		Student stu = (Student)obj;
+		if(this.studentId == stu.studentId)
+			return true;
+		return false;
+	}
+
+	@Override
+	public String toString() {
+		return this.studentId +":"+ this.name;
+	}
+}
+

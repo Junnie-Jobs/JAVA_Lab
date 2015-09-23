@@ -9,9 +9,15 @@ import java.util.HashMap;
 
 
 public class ReadSrc {
+	
+	public static HashMap<String, String> getFile(String fileName){
+		return getFile(fileName, 7, 13);
+	}
+	
+	public static HashMap<String, String> getFile(String fileName, int num1, int num2){
 
-	public static void getFile(HashMap<String, String> map, String fileName){
-
+		HashMap<String, String> map = new HashMap<String, String>();
+		
 		try {
 			String fileSrc = "/Users/NEXT/Desktop/KHAN/"+ fileName +".csv";
 
@@ -19,53 +25,181 @@ public class ReadSrc {
 	        BufferedReader br = new BufferedReader(new FileReader(csv));
 	        String line = br.readLine();
 	        
+	        int lineNum = 1;
 	        while ((line = br.readLine()) != null) {
 	            String[] token = line.split(",");
+	            String[] result = new String[20];
 	            
-	    		int[] pos = new int[10];
 	    		int index=0;
-	    			            
+      
 //	    		추출, "를 가진 요소 파악, 저장
-	            for(int i=0; i<token.length; i++){
-	            	if(token[i].contains("\"")){
-	            		pos[index]=i;
-	            		System.out.print(token[i]);
-	            		index++;
+	            for(int i=0; index<token.length; i++){
+	            	
+	            	result[i] = token[index];
+
+		    		boolean con1 = false;
+	            	if(token[index].contains("\"")){
+	            		con1 = true;
+	            	};
+	            	if(token[index].contains("\"\"")){
+	            		con1 = false;
+	            	};
+	            	if(token[index].contains("\"\"\"")){
+	            		con1 = true;
+	            	};
+	            	if(token[index].startsWith("\"")){
+	            		con1 = true;
 	            	}
-	            }System.out.println("   "+index);
+	            	if(token[index].startsWith("\"") && token[index].endsWith("\"")){
+	            		con1 = false;
+	            	};
+	            	if(token[index].startsWith("\"\"\"") && token[index].endsWith("\"\"")){
+	            		con1 = true;
+	            	};
+	            	while(con1){
+	            		index++;
+//	            		System.out.println(index);
+//	            		System.out.println(result[i]);
+	            		result[i] += (","+token[index]);
+	            		if(token[index].contains("\"")){
+		            		con1 = false;
+		            		if(token[index].contains("\"\"")){
+			            		con1 = true;
+		            		};
+//		            		예외들 젠장
+		            		if(token[index].contains("\"\" \"")){
+			            		con1 = false;
+		            		};
+		            		if(token[index].contains("\"\")\"")){
+			            		con1 = false;
+		            		};
+		            		if(token[index].contains("\"\"\"")){
+			            		con1 = false;
+			            	};
+			            	if(token[index].endsWith("\"")){
+			            		con1 = false;
+			            	}
+//		            		System.out.println(result[i]);
+		            	};
+	            	};
+	            	index++;
+	            }
 	            
-//	            "를 가진 요소들 결합, 배열 재 조정
-//	            pos의 길이는 무조건 짝수....
-//	            for(int a = 0; a<pos.length/2;a++){
-//	            	boolean con = true;
-//		            while(con){
-//		            	token[pos[2*a]] += token[pos[2*a]+1];
-//		            	for(int i = pos[2*a]+1; i<token.length-1; i++)
-//		            		token[i] = token[i+1];
-//		            	if(token[pos[2*a+1]] != token[pos[2*a]+1]){
-//		            		con = false;
-//		            	};
-//		            };
-//	            };
-//	            
-//	            System.out.println("asdf");
-//	            다시 한번 출력해볼까나
-//	            for(int i=0; i<token.length; i++){
-//	            	System.out.print(token[i]+" || ");
-//	            }System.out.println();
-	            
-//	            map.put(token[7], line);
-//	            System.out.print(token[7]+"\t");
+	            if(result[num2] != null){
+	            	lineNum++;
+//		            System.out.println("[num: "+ lineNum +"] "+result[num2]);
+	            	map.put(result[num1], line);
+	            }
 	        }
 	        br.close();
-	    } 
+	        System.out.println("[ "+fileName+" ]");
+	        System.out.println("[파일 위치] : "+fileSrc);
+	        System.out.println("[총 라인 수] : "+lineNum);
+	        System.out.println();
+		}
 	    catch (FileNotFoundException e) {
 	        e.printStackTrace();
 	    } 
 	    catch (IOException e) {
 	        e.printStackTrace();
 	    }
+		return map;
 	}
 	
+	
+	
+	
+	public static HashMap<String, String> getSrcFile(String fileName, int num){
+
+		HashMap<String, String> map = new HashMap<String, String>();
+		
+		try {
+			String fileSrc = "/Users/NEXT/Desktop/KHAN/"+ fileName +".csv";
+
+	        File csv = new File(fileSrc);
+	        BufferedReader br = new BufferedReader(new FileReader(csv));
+	        String line = br.readLine();
+	        
+	        int lineNum = 1;
+	        while ((line = br.readLine()) != null) {
+	            String[] token = line.split(",");
+	            String[] result = new String[20];
+	            
+	    		int index=0;
+      
+//	    		추출, "를 가진 요소 파악, 저장
+	            for(int i=0; index<token.length; i++){
+	            	
+	            	result[i] = token[index];
+
+		    		boolean con1 = false;
+	            	if(token[index].contains("\"")){
+	            		con1 = true;
+	            	};
+	            	if(token[index].contains("\"\"")){
+	            		con1 = false;
+	            	};
+	            	if(token[index].contains("\"\"\"")){
+	            		con1 = true;
+	            	};
+	            	if(token[index].startsWith("\"")){
+	            		con1 = true;
+	            	}
+	            	if(token[index].startsWith("\"") && token[index].endsWith("\"")){
+	            		con1 = false;
+	            	};
+	            	if(token[index].startsWith("\"\"\"") && token[index].endsWith("\"\"")){
+	            		con1 = true;
+	            	};
+	            	while(con1){
+	            		index++;
+//	            		System.out.println(index);
+//	            		System.out.println(result[i]);
+	            		result[i] += (","+token[index]);
+	            		if(token[index].contains("\"")){
+		            		con1 = false;
+		            		if(token[index].contains("\"\"")){
+			            		con1 = true;
+		            		};
+//		            		예외들 젠장
+		            		if(token[index].contains("\"\" \"")){
+			            		con1 = false;
+		            		};
+		            		if(token[index].contains("\"\")\"")){
+			            		con1 = false;
+		            		};
+		            		if(token[index].contains("\"\"\"")){
+			            		con1 = false;
+			            	};
+			            	if(token[index].endsWith("\"")){
+			            		con1 = false;
+			            	}
+//		            		System.out.println(result[i]);
+		            	};
+	            	};
+	            	index++;
+	            }
+	            
+//	            System.out.println("[num: "+ lineNum +"] "+result[num]);
+
+	            if(result[13] != null){
+	            	lineNum++;
+	            	map.put(result[num], line);
+	            }
+	        }
+	        br.close();
+	        System.out.println("[ Get SrcFile "+fileName+" ]");
+	        System.out.println("[파일 위치] : "+fileSrc);
+	        System.out.println("[총 라인 수] : "+lineNum);
+	        System.out.println();
+		}
+	    catch (FileNotFoundException e) {
+	        e.printStackTrace();
+	    } 
+	    catch (IOException e) {
+	        e.printStackTrace();
+	    }
+		return map;
+	}
 	
 }

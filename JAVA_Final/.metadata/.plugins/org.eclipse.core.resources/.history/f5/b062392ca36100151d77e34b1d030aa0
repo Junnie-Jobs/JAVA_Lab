@@ -1,0 +1,8 @@
+package num4;
+
+public class Grandeur extends Car{
+
+	public Grandeur(String name) {
+		super(name);
+	}
+}

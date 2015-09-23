@@ -1,0 +1,20 @@
+package num4;
+
+public class Avante extends Car{
+	
+	public void start() {
+
+	}
+
+	public void drive() {
+
+	}
+
+	public void stop() {
+
+	}
+
+	public void turnoff() {
+
+	}
+}

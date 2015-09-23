@@ -1,0 +1,6 @@
+INDEX VERSION 1.127+/Users/NEXT/Documents/JAVA_Final/.metadata/.plugins/org.eclipse.jdt.core
+715266996.index
+1961020018.index
+1571105570.index
+1410557705.index
+1317809335.index

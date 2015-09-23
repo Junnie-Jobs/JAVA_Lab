@@ -1,0 +1,10 @@
+package num4;
+
+public class Car {
+
+	public void start(){}
+	public void drive(){}
+	public void stop(){}
+	public void turnoff(){}
+}
+

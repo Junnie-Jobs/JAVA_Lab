@@ -1,0 +1,10 @@
+package num5;
+
+public class Employee {
+	private int employeeID;
+	public String employeeName;
+	
+	public Employee(String name){
+		this.name = name;
+	}
+}

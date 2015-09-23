@@ -1,0 +1,9 @@
+package num4;
+
+public class Bumblebeeee extends Car {
+
+	public Bumblebeeee(String name) {
+		super(name);
+	}
+
+}

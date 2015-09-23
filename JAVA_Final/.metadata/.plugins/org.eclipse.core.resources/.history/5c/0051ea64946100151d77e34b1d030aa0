@@ -1,0 +1,25 @@
+package num3;
+
+public class Student {
+
+	public String studentId;
+	public String name;
+
+	
+	public Student(String studentId, String name){
+		this.studentId = studentId;
+		this.name = name;
+	}
+
+
+	@Override
+	public int hashCode() {
+		return ;
+	}
+
+	@Override
+	public String toString() {
+		return this.studentId +":"+ this.name;
+	}
+}
+

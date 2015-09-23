@@ -1,0 +1,24 @@
+package num4;
+
+public class Avente extends Car{
+
+	public void start() {
+		// TODO Auto-generated method stub
+		super.start();
+	}
+
+	public void drive() {
+		// TODO Auto-generated method stub
+		super.drive();
+	}
+
+	public void stop() {
+		// TODO Auto-generated method stub
+		super.stop();
+	}
+
+	public void turnoff() {
+		// TODO Auto-generated method stub
+		super.turnoff();
+	}
+}

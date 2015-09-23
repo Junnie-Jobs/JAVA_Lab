@@ -1,0 +1,17 @@
+package num4;
+
+public abstract class Car {
+	
+	public void start(){}
+	public void drive(){}
+	public void stop(){}
+	public void turnoff(){}
+	
+	public void run(){
+		this.start();
+		this.drive();
+		this.stop();
+		this.turnoff();
+	}
+}
+

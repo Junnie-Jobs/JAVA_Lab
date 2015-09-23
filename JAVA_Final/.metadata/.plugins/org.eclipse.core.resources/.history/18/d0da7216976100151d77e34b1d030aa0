@@ -1,0 +1,12 @@
+package num8;
+
+public class LineText {
+	private TextView textview;
+	
+	Line(TextView textview){
+		this.textview = textview; 
+	}
+	public void viewing(){
+		System.out.print("Line ");
+	}
+}

@@ -1,0 +1,10 @@
+package num4;
+
+public class Car {
+
+	start(){}
+	drive(){}
+	stop(){}
+	turnoff(){}
+}
+

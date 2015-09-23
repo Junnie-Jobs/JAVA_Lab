@@ -1,0 +1,10 @@
+package num8;
+
+public class Scroll extends TextView{
+	private TextView textview;
+	
+	Scroll(TextView textview){
+		this.textview = textview; 
+	}
+	
+}

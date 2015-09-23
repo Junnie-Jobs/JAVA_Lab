@@ -1,0 +1,5 @@
+package num4;
+
+public class Avante extends Car{
+	
+}

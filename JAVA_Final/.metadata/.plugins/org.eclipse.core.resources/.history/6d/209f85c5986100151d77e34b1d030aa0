@@ -1,0 +1,28 @@
+package num1;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class CarFactory {
+
+	private static CarFactory cf = new CarFactory();
+	private CarFactory(){};
+	
+	
+	
+	public static CarFactory getInstance(){
+		if(cf == null){
+			CarFactory cf = new CarFactory();
+			return cf;
+		}
+		return cf;
+	}
+	
+	public Car createCar(String carname){
+		Car car = new Car(carname);
+		return car;
+	}
+	
+	private ArrayList<Car> list = new ArrayList<Car>();
+
+}

@@ -1,0 +1,12 @@
+package num8;
+
+public class Spring {
+	private TextView textview;
+	
+	Spring(TextView textview){
+		this.textview = textview; 
+	}
+	public void viewing(){
+		System.out.print("Scrolling ");
+	}
+}

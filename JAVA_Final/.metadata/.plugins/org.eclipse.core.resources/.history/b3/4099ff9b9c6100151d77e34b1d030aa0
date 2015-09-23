@@ -1,0 +1,27 @@
+package num4;
+
+public abstract class Car {
+	
+	private String name;
+	
+	public Car(String name){
+		this.name = name;
+	}
+	
+	private void start(){}
+	private void drive(){}
+	private void stop(){}
+	private void turnoff(){}
+	
+	public void run(){
+		this.start();
+		this.drive();
+		this.stop();
+		this.turnoff();
+	}
+	
+	public void washCar(){
+		System.out.println("WashCar!");
+	}
+}
+

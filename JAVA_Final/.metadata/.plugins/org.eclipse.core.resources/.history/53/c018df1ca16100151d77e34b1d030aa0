@@ -1,0 +1,38 @@
+package num6;
+
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.CharBuffer;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		while(true){
+			InputStreamReader irs = new InputStreamReader(System.in);
+			try {
+				int input = irs.read();
+				int[] arr = null;
+				System.out.println((char)input);
+				System.out.println(input == 'e');
+				if(input == 'e'){
+					break;
+				}
+				if(input == 'S'){
+					Sort ss = new ShellSort();
+				}
+				if(input == 'Q'){
+					Sort ss = new QuickSort();
+				}
+				if(input == 'M'){
+					Sort ss = new MergeSort();
+				}
+				ss.sort(arr);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
+			
+		}
+	}
+}

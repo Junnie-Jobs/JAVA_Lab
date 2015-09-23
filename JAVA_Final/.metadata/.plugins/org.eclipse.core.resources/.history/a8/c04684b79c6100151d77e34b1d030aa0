@@ -1,0 +1,12 @@
+package num4;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Avante avante = new Avante("avante");
+		avante.run();
+		Genesis genesis = new Genesis("genesis");
+	}
+
+}

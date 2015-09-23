@@ -1,0 +1,10 @@
+package num4;
+
+public class Avante extends Car{
+	
+	private String name;
+	
+	public Avante(String name){
+		super(name);
+	}
+}

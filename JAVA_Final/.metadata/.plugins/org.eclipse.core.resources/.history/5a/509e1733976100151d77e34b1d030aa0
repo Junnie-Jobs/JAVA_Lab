@@ -1,0 +1,12 @@
+package num8;
+
+public class Bordering {
+	private TextView textview;
+	
+	public Bordering(TextView textview){
+		this.textview = textview; 
+	}
+	public void viewing(){
+		System.out.print("Line ");
+	}
+}
